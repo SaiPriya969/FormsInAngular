@@ -1,0 +1,10 @@
+<!-- <p>additional-data works!</p> -->
+<form [formGroup]="innerForm">
+    <div id="inner">
+      <select #selecttype formControlName="typeName"  (click)="selectedType(selecttype.value)">
+        <option *ngFor="let type of types">{{type}}</option>
+      </select>
+      <input type="text" formControlName="name" placeholder="Enter Value" (keyup.enter)="keyEnterFun()">
+      <div id="error">{{error}}</div>
+    </div>
+</form>

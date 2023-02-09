@@ -1,0 +1,8 @@
+<form [formGroup]="innerForm">
+  <div id="inner">
+    <input type="text" #nameLabel formControlName="name" placeholder="Enter Value" (keyup.enter)="keyEnterFun()">
+    <select #selecttype formControlName="typeName"  (click)="selectedType(selecttype.value)">
+      <option *ngFor="let type of Objectkeys(Types)">{{type}}</option>
+    </select>
+  </div>
+</form>
